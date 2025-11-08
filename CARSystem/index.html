@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Abuse Reporting System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <a href="dashboard.php">ADMIN</a> 
+        </nav>
+    </div>
+    <div class="container">
+        <h1>Report Child Abuse</h1>
+        <form id="reportForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Child's Name</label>
+                <input type="text" name="child_name" required>
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="age" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <select name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Incident Date</label>
+                <input type="date" name="incident_date" required>
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <input type="text" name="location" required>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="reporter_name" required>
+            </div>
+            <div class="form-group">
+                <label>Your Contact</label>
+                <input type="text" name="reporter_contact" required>
+            </div>
+            <div class="form-group">
+                <label>Upload Evidence (Images/Videos/Audio)</label>
+                <input type="file" name="media[]" multiple accept="image/*,video/*,audio/*">
+            </div>
+            <button type="submit">Submit Report</button>
+        </form>
+        <div id="response"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
